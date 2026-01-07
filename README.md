@@ -1,13 +1,13 @@
 # Vulnerability Template Server
 
-This project serves as a template for building new microservices in Node.js, demonstrating clean architecture, strict validation and centralized routing.
+This project serves as a template for building new microservices in Node.js with clean architecture, strict validation and centralized routing.
 
 ## Setup & Run
 
 ### Prerequisites
 - Node.js (v18+)
 - MongoDB
-- [Phase CLI](https://docs.phase.dev/cli/installation)
+- [Phase CLI](https://docs.phase.dev/cli/install)
 
 ### Installation
 ```bash
