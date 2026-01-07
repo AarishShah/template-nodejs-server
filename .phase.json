@@ -1,0 +1,8 @@
+{
+  "version": "2",
+  "phaseApp": "template-server",
+  "appId": "0ba18f10-f483-4676-9328-1474ccf043d2",
+  "defaultEnv": "Development",
+  "envId": "0e2fa5d6-b191-4b8a-91b7-5f373f109528",
+  "monorepoSupport": false
+}
