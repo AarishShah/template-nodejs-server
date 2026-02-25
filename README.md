@@ -56,20 +56,22 @@ The project adheres to a **Standard Layered Architecture** (Controller-Service-M
 
 ```text
 vulnerabilities/
-├── config/             # Configuration (clean env access)
-├── controllers/        # Request handlers (Standard)
-├── errors/             # Custom Error classes and handlers
-├── middlewares/        # Express middlewares (Auth, Validation, Error Handling)
-├── models/             # Mongoose Models (Standard)
-├── routes/             # Route definitions
-│   ├── v1/             # Versioned routes
-│   ├── index.js        # Central router (Auth & Rate Limiting applied here)
-│   └── system.routes.js# System routes (Health check)
-├── services/           # Business Logic (Standard)
-├── setup/              # App initialization scripts
-├── utils/              # Utilities (Rate Limiter, API Response)
-├── validations/        # Joi Validation Schemas
-└── app.js              # Entry Point
+├── src/
+│   ├── config/             # Configuration (appConfig & env)
+│   ├── controllers/        # Request handlers (Standard)
+│   ├── database/           # Database connections
+│   ├── errors/             # Custom Error classes and handlers
+│   ├── middlewares/        # Express middlewares (Auth, Validation, Error Handling)
+│   ├── models/             # Mongoose Models (Standard)
+│   ├── routes/             # Route definitions
+│   │   ├── v1/             # Versioned routes
+│   │   ├── index.js        # Central router (Auth & Rate Limiting applied here)
+│   │   └── system.routes.js# System routes (Health check)
+│   ├── services/           # Business Logic (Standard)
+│   ├── setup/              # App initialization scripts
+│   ├── utils/              # Utilities (Rate Limiter, API Response)
+│   └── validations/        # Joi Validation Schemas
+└── app.js                  # Entry Point
 ```
 
 ## Key Features
