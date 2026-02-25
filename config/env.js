@@ -4,13 +4,18 @@ const REQUIRED_VARS = ["PORT", "MONGODB_URL"];
 export class Config {
 
     static check() {
-        const missing = REQUIRED_VARS.filter(key => !process.env[key]);
+        const missing = [];
+        for (const varName of REQUIRED_VARS) {
+            if (!process.env[varName]) {
+                missing.push(varName);
+            }
+        }
         if (missing.length > 0) {
-            console.warn(`Warning: Missing environment variables: ${missing.join(", ")}. Using defaults where possible.`);
+            throw new Error(`Missing required environment variables: ${missing.join(", ")}`);
         }
     }
 
-    static get(key) {
-        return process.env[key];
+    static get(key, defaultValue) {
+        return process.env[key] || defaultValue;
     }
 }

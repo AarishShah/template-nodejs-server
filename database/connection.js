@@ -1,10 +1,10 @@
 import mongoose from "mongoose";
-import { Config } from "../config/env.js";
+import { appConfig } from "../config/app-config.js";
 
 
 export async function connectDatabase() {
     try {
-        await mongoose.connect(Config.get("MONGODB_URL"), {
+        await mongoose.connect(appConfig.MONGODB_URL, {
             // useNewUrlParser: true, // Deprecated in newer mongoose
             // useUnifiedTopology: true, // Deprecated in newer mongoose
         });
