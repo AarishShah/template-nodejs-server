@@ -8,8 +8,8 @@ export async function connectDatabase() {
             // useNewUrlParser: true, // Deprecated in newer mongoose
             // useUnifiedTopology: true, // Deprecated in newer mongoose
         });
-        console.log("Connected to MongoDB");
+        console.log("[DATABASE] - Connected to MongoDB");
     } catch (error) {
-        console.error("Failed to connect to MongoDB", error);
+        console.error("[DATABASE] - Failed to connect to MongoDB", error);
     }
 }
